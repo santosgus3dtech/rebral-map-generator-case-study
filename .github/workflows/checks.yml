@@ -1,0 +1,19 @@
+name: docs checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  safe-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f README.md
+          test -f docs/case-study.md
+          test -f docs/images/architecture.svg
+      - name: Block private data formats
+        run: |
+          ! find . -type f \( -name '*.pdf' -o -name '*.xlsx' -o -name '*.xlsm' -o -name '*.docx' -o -name '*.sqlite' -o -name '*.db' -o -name '.env' \) | grep .

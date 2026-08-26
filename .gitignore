@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.pdf
+*.xlsx
+*.xlsm
+*.docx
+*.sqlite
+*.db
+*.env
+outputs/
+private/
+data/
