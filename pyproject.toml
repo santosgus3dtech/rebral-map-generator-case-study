@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rebral-map-generator-case-study"
+version = "1.0.0"
+description = "Sanitized spreadsheet automation case study with a runnable synthetic demo"
+requires-python = ">=3.10"
+dependencies = ["openpyxl>=3.1,<4", "Pillow>=11,<13"]
+
+[project.scripts]
+map-demo = "map_demo.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

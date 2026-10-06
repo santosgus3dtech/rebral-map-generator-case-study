@@ -1,14 +1,21 @@
-name: docs checks
+name: CI
 
 on:
   push:
   pull_request:
 
 jobs:
-  safe-docs:
+  test-and-safety:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - run: pytest -q
+      - run: python -m map_demo.cli examples/synthetic-map.json outputs/demo-map.xlsx --preview outputs/demo-preview.png
       - name: Check required files
         run: |
           test -f README.md
@@ -16,4 +23,4 @@ jobs:
           test -f docs/images/architecture.svg
       - name: Block private data formats
         run: |
-          ! find . -type f \( -name '*.pdf' -o -name '*.xlsx' -o -name '*.xlsm' -o -name '*.docx' -o -name '*.sqlite' -o -name '*.db' -o -name '.env' \) | grep .
+          ! git ls-files | grep -E '\.(pdf|xlsx|xlsm|docx|sqlite|db)$|(^|/)\.env$'

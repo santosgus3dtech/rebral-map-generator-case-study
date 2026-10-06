@@ -1,0 +1,14 @@
+{
+  "unit": {
+    "code": "UNIT-DEMO-01",
+    "name": "Community Center Demo"
+  },
+  "period": "2026-09",
+  "documents": [
+    {"reference": "DOC-1001", "supplier": "Northstar Supplies", "issued_on": "2026-09-03", "category": "Office", "amount": 128.40},
+    {"reference": "DOC-1002", "supplier": "Cedar Services", "issued_on": "2026-09-08", "category": "Maintenance", "amount": 286.00},
+    {"reference": "DOC-1003", "supplier": "Lumen Market", "issued_on": "2026-09-14", "category": "Consumables", "amount": 94.75},
+    {"reference": "DOC-1004", "supplier": "Harbor Utilities", "issued_on": "2026-09-21", "category": "Utilities", "amount": 312.18},
+    {"reference": "DOC-1005", "supplier": "Atlas Logistics", "issued_on": "2026-09-27", "category": "Transport", "amount": 76.20}
+  ]
+}

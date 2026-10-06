@@ -1,6 +1,6 @@
 # Case Study: Private Document Automation For Expense Maps
 
-This is a sanitized public case study for a private operational system. It intentionally excludes source files, databases, spreadsheets, PDFs, contact details, credentials and organization-specific documents.
+This is a sanitized public case study for a private operational system. It excludes private source files, databases, spreadsheets, PDFs, contact details, credentials and organization-specific documents. A separate runnable demo now reproduces the generic JSON-to-XLSX pattern with invented data and a fresh implementation.
 
 ## Problem
 
