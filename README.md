@@ -1,5 +1,7 @@
 # Rebral Map Generator Case Study
 
+🇧🇷 [Leia este README em Português (Brasil)](README.pt-BR.md).
+
 Public, sanitized case study for a private Python document automation system.
 
 ![Architecture](docs/images/architecture.svg)
